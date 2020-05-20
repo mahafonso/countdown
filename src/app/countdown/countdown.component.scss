@@ -1,0 +1,47 @@
+@import '../../assets/styles/helpers/mixins/spinner';
+
+.content {
+  .content__wrapper {
+    margin: 0 auto 30px;
+    max-width: 1360px;
+    padding: 30px;
+    position: relative;
+
+    .spinner {
+      left: 50%;
+      position: relative;
+      top: 0;
+      transform: translateX(-50%);
+
+      &::before {
+        @include spinner(#fff, 6px, #808080, 40px);
+        left: 0;
+        position: absolute;
+        top: 0;
+      }
+    }
+
+    .wrapper__countdown {
+      display: flex;
+      margin: 0 auto;
+      max-width: 780px;
+      justify-content: center;
+
+      .countdown__item {
+        margin: 0 20px;
+        text-align: center;
+        width: 100px;
+
+        .item__number {
+          display: block;
+          font-size: 76px;
+        }
+
+        .item__text {
+          font-size: 18px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

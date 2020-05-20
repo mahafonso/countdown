@@ -1,0 +1,27 @@
+<section class="content">
+  <div class="content__wrapper">
+    <span *ngIf="!days && !hours && !minutes && !seconds" class="spinner"></span>
+
+    <div *ngIf="days || hours || minutes || seconds" class="wrapper__countdown">
+      <div class="countdown__item days">
+        <span class="item__number">{{days}}</span>
+        <span class="item__text">days</span>
+      </div>
+
+      <div class="countdown__item hours">
+        <span class="item__number">{{hours}}</span>
+        <span class="item__text">horas</span>
+      </div>
+
+      <div class="countdown__item minutes">
+        <span class="item__number">{{minutes}}</span>
+        <span class="item__text">minutes</span>
+      </div>
+
+      <div class="countdown__item seconds">
+        <span class="item__number">{{seconds}}</span>
+        <span class="item__text">seconds</span>
+      </div>
+    </div>
+  </div>
+</section>
